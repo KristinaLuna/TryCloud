@@ -1,5 +1,7 @@
 package com.trycloud.step_definitions;
 
+import com.trycloud.pages.LoginPage;
+import com.trycloud.utilities.ConfigurationReader;
 import com.trycloud.utilities.Driver;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -12,7 +14,7 @@ public class Hooks {
 
     @Before
     public void setupScenario(){
-
+        Driver.getDriver().get(ConfigurationReader.getProperty("trycloud.net.url"));
     }
 
     @After
