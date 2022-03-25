@@ -1,6 +1,5 @@
 package com.trycloud.step_definitions;
 
-import com.trycloud.pages.LoginPage;
 import com.trycloud.utilities.ConfigurationReader;
 import com.trycloud.utilities.Driver;
 import org.openqa.selenium.OutputType;
