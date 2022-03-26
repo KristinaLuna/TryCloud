@@ -1,20 +1,12 @@
 package com.trycloud.step_definitions;
 
-import com.trycloud.utilities.ConfigurationReader;
 import com.trycloud.utilities.Driver;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import io.cucumber.java.After;
-import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 
 public class Hooks {
-
-
-    @Before
-    public void setupScenario(){
-        Driver.getDriver().get(ConfigurationReader.getProperty("trycloud.net.url"));
-    }
 
     @After
     public void tearDown(Scenario scenario){
