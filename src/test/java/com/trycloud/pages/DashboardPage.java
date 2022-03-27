@@ -1,20 +1,24 @@
 package com.trycloud.pages;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
-import java.util.List;
+public class DashboardPage extends BasePage {
 
-public class DashboardPage {
+    @FindBy(xpath = "//span[.='Dashboard']")
+    public WebElement dashboardModule;
 
-    //this method loops through all modules on the homepage and selects the one you pass in String attributeValue
-    public static void selectModule(List<WebElement> appMenuModules, String attributeValue){
+    @FindBy(css="li[data-id='files']")
+    public WebElement filesModule ;
 
-        for (WebElement each : appMenuModules) {
+    @FindBy(css ="li[data-id='spreed']")
+    public WebElement talkModule;
 
-            if (each.getAttribute("aria-label").equalsIgnoreCase(attributeValue)){
-                each.click();
-            }
-        }
+    @FindBy(css="li[data-id='contacts']")
+    public WebElement contactsModule ;
 
-    }
+    @FindBy(xpath ="//div[@class='header-menu unified-search header-menu--opened']")
+    public WebElement searchIcon;
+
+
 }
