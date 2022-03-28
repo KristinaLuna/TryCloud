@@ -3,7 +3,7 @@ package com.trycloud.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class Login extends BasePage{
+public class LoginPage extends BasePage{
 
     @FindBy(id="user")
     public WebElement inputUsername;
