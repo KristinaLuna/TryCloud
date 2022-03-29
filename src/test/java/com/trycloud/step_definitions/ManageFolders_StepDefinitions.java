@@ -19,9 +19,8 @@ public class ManageFolders_StepDefinitions {
     @Given("user on the dashboard page")
     public void user_on_the_dashboard_page() {
         Driver.getDriver().get(ConfigurationReader.getProperty("trycloud.net.url"));
-        login.inputUsername.sendKeys(ConfigurationReader.getProperty("username1"));
-        login.inputPassword.sendKeys(ConfigurationReader.getProperty("password"));
-        login.submitButton.click();
+        login.Login();
+
     }
     @When("the user clicks the {string} module")
     public void the_user_clicks_the_module(String string) {
