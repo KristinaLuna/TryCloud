@@ -13,4 +13,7 @@ public class FilesModulePage extends BasePage {
     @FindBy(xpath="//div[@id='app-settings-content']//label")
     public List<WebElement> checkBoxes;
 
+    @FindBy(xpath = "//a[@class='button new']")
+    public WebElement addIcon;
+
 }
