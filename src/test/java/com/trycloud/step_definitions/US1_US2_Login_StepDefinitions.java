@@ -12,12 +12,20 @@ public class US1_US2_Login_StepDefinitions {
 
     LoginPage login = new LoginPage();
 
-    @When("user use username {string} and passcode {string}")
-    public void user_use_username_and_passcode(String string, String string2) {
+    @When("user use username {string} and passcode {string}")   //********
+    public void user_use_username_and_passcode(String string1, String string2) {
+        login.inputUsername.sendKeys(string1);
+        login.inputPassword.sendKeys(string2);
+
 
     }
-    @Then("verify the user should be at the dashboard page")
+    @Then("verify the user should be at the dashboard page")  //********
     public void verify_the_user_should_be_at_the_dashboard_page() {
+        if(login.dashboard.isDisplayed()){
+            System.out.println("User is at the Dashboard Page");
+        }
+
+
 
     }
 

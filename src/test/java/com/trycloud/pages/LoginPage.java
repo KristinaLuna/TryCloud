@@ -11,6 +11,9 @@ public class LoginPage extends BasePage{
     @FindBy(id="password")
     public WebElement inputPassword;
 
+    @FindBy(id="app-dashboard")
+    public WebElement dashboard;
+
     @FindBy(id="submit-form")
     public WebElement submitButton;
 
