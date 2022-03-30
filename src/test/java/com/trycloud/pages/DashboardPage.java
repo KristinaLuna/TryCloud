@@ -22,6 +22,9 @@ public class DashboardPage extends BasePage {
     @FindBy(xpath ="//div[@class='header-menu unified-search header-menu--opened']")
     public WebElement searchIcon;
 
+    @FindBy(xpath = "//ul[@id='appmenu']/li/a")
+    public List<WebElement> fileActionMenu;
+
 
     //this method loops through all modules on homePage and selects the module whose attribute value was passed as String attributeValue
     public static void selectModule(List<WebElement> appMenuModules, String attributeValue){
