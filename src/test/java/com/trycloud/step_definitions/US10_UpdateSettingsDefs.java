@@ -25,16 +25,10 @@ public class US10_UpdateSettingsDefs {
     FilesModulePage files = new FilesModulePage();
     String storageBeforeUpload;
 
-    @Given("user on the dashboard page")
-    public void user_on_the_dashboard_page() {
-        String url = ConfigurationReader.getProperty("trycloud.net.url");
-        Driver.getDriver().get(url);
-        loginPage.Login();
 
-    }
     @When("user clicks the Files module")
     public void user_clicks_the_files_module() {
-       BrowserUtils.waitForPresenceOfElement(By.xpath("//li[@data-id='files']"), 5);
+        BrowserUtils.waitForVisibility(dashboard.filesModule, 5);
         dashboard.filesModule.click();
     }
 
@@ -118,6 +112,10 @@ public class US10_UpdateSettingsDefs {
 
         boolean b = n2 > n1;
         Assert.assertTrue(b);
+
+        //remove uploaded file
+        files.FileOption3Dots.click();
+        files.deleteFileOption.click();
 
     }
     }

@@ -16,16 +16,11 @@ public class ManageFolders_StepDefinitions {
     DashboardPage dashboard = new DashboardPage();
 
 
-    @Given("user on the dashboard page")
-    public void user_on_the_dashboard_page() {
-        Driver.getDriver().get(ConfigurationReader.getProperty("trycloud.net.url"));
-        login.Login();
 
-    }
-    @When("the user clicks the {string} module")
-    public void the_user_clicks_the_module(String string) {
-        dashboard.filesModule.click();
-    }
+   // @When("the user clicks the {string} module")
+   //public void the_user_clicks_the_module(String string) {
+   //    dashboard.filesModule.click();
+   //  }
     @When("user clicks the add icon on the top")
     public void user_clicks_the_add_icon_on_the_top() {
         files.addIcon.click();
