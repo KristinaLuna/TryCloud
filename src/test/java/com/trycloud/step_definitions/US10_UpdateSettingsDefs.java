@@ -27,7 +27,7 @@ public class US10_UpdateSettingsDefs {
 
     @Given("user on the dashboard page")
     public void user_on_the_dashboard_page() {
-        String url = ConfigurationReader.getProperty("url");
+        String url = ConfigurationReader.getProperty("trycloud.net.url");
         Driver.getDriver().get(url);
         loginPage.Login();
 
@@ -64,7 +64,7 @@ public class US10_UpdateSettingsDefs {
     @And("user uploads file with the upload file option")
     public void userUploadsFileWithTheUploadFileOption() {
             // BrowserUtils.waitFor(2);
-            files.icon_add.click();
+            files.addIcon.click();
 
             String path= "D:\\soft skills\\1.Interview Prep - SDLC & Agile & STLC - Google Docs.pdf";
             BrowserUtils.waitFor(3);
