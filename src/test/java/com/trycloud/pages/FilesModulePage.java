@@ -38,5 +38,11 @@ public class FilesModulePage extends BasePage {
     @FindBy(xpath = "//input[@class='icon-confirm']")
     public WebElement submit;
 
+    @FindBy(xpath = "(//p[text()])[1]")
+    public WebElement numberOfUsage;
+
+    @FindBy(xpath = "//span[@class='svg icon icon-upload']")
+    public WebElement uploadFileBtn;
+
 
 }
