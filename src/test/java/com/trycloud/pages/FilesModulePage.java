@@ -44,5 +44,11 @@ public class FilesModulePage extends BasePage {
     @FindBy(xpath = "//span[@class='svg icon icon-upload']")
     public WebElement uploadFileBtn;
 
+    @FindBy(xpath = "(//a[@data-action='menu']/span)[7]")
+    public WebElement FileOption3Dots;
+
+    @FindBy(xpath = "//span[.='Delete file']")
+    public WebElement deleteFileOption;
+
 
 }
