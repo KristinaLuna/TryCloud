@@ -2,7 +2,7 @@ Feature: As a user, I should be able to update settings.
 
 
 
-
+@t
   Scenario: Verify users are able to update settings
     Given user on the dashboard page
     When user clicks the Files module
