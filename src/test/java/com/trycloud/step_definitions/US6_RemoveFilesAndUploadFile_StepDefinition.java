@@ -16,13 +16,6 @@ public class US6_RemoveFilesAndUploadFile_StepDefinition {
     DashboardPage dashboardPage = new DashboardPage();
     FilesModulePage filesModulePage = new FilesModulePage();
 
-    @Given("user on the dashboard page")
-    public void user_on_the_dashboard_page() {
-
-        Driver.getDriver().get(ConfigurationReader.getProperty("trycloud.net.url"));
-        loginPage.Login();
-    }
-
     @When("the user clicks the {string} module")
     public void the_user_clicks_the_module(String filesModule) {
         try {
