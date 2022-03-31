@@ -12,6 +12,8 @@ public class FilesModulePage extends BasePage {
 
     @FindBy(xpath="//div[@id='app-settings-content']//label")
     public List<WebElement> checkBoxes;
+   // @FindBy (xpath = "//div[@id='app-settings-content']//input[@type='checkbox']")
+    //public List<WebElement> settingsCheckboxes;
 
 
     @FindBy(xpath = "//a[@class='action action-menu permanent']")
