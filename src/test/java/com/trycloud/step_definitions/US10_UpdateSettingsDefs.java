@@ -49,8 +49,10 @@ public class US10_UpdateSettingsDefs {
         for (int i = 1; i <= 3; i++) {
             WebElement checkBox = Driver.getDriver().findElement(By.xpath("(//div[@id='app-settings-content']//label)[" + i + "]"));
             BrowserUtils.waitFor(5);
+            boolean beforeClick = files.checkBoxes.get(i).isSelected();
             checkBox.click();
-            Assert.assertTrue(checkBox.isDisplayed());
+            boolean afterClick =  files.checkBoxes.get(i).isSelected();
+            Assert.assertNotEquals(beforeClick, afterClick);
         }
 
     }
