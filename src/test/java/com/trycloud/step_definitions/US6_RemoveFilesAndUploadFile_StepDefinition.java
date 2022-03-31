@@ -16,14 +16,14 @@ public class US6_RemoveFilesAndUploadFile_StepDefinition {
     DashboardPage dashboardPage = new DashboardPage();
     FilesModulePage filesModulePage = new FilesModulePage();
 
-    @When("the user clicks the {string} module")
-    public void the_user_clicks_the_module(String filesModule) {
-        try {
-            DashboardPage.selectModule(dashboardPage.fileActionMenu, filesModule);
-        }catch (StaleElementReferenceException st){
-            System.out.println("StaleElementReferenceException is catch");
-        }
-    }
+//    @When("the user clicks the {string} module")
+//    public void the_user_clicks_the_module(String filesModule) {
+//        try {
+//            DashboardPage.selectModule(dashboardPage.fileActionMenu, filesModule);
+//        }catch (StaleElementReferenceException st){
+//            System.out.println("StaleElementReferenceException is catch");
+//        }
+//    }
 
     @When("the users click action-icon from any file on the page to remove")
     public void the_users_click_action_icon_from_any_file_on_the_page_to_remove() {
