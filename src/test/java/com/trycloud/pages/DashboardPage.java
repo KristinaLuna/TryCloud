@@ -34,5 +34,6 @@ public class DashboardPage {
 
         Driver.getDriver().findElement(By.xpath(locator)).click();
 
+
     }
 }
