@@ -10,10 +10,8 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DashboardPage {
-    public DashboardPage() {
-        PageFactory.initElements(Driver.getDriver(), this);
-    }
+public class DashboardPage extends BasePage{
+
 
     @FindBy(xpath = "//ul[@id='appmenu']//li[@id='more-apps']//preceding-sibling::li")
     public List<WebElement> modules;
