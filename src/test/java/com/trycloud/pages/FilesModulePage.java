@@ -15,7 +15,25 @@ public class FilesModulePage extends BasePage {
 
 
     @FindBy(xpath = "//a[@class='action action-menu permanent']")
-    public List<WebElement> actionIcon;
+    public List<WebElement> actionIcons;
+
+    @FindBy(xpath = "(//a[@data-action='menu'])[1]")
+    public WebElement actionIcon;
+
+    @FindBy(xpath = "//span[@class='icon icon-starred']")
+    public WebElement favoriteIcon;
+
+    @FindBy(xpath = "(//span[@class='innernametext'])[1]")
+    public WebElement chosenToFavoriteFile;
+
+    @FindBy(xpath = "//span[@class='innernametext']")
+    public List<WebElement> filesInFavoritesModules;
+
+    @FindBy(xpath = "//span[.='Add to favorites']")
+    public WebElement addToFavorites;
+
+    @FindBy(xpath = "//a[@class='nav-icon-favorites svg']")
+    public WebElement favoritesModules;
 
     @FindBy(xpath = "//span[.='Remove from favorites']")
     public WebElement removeFromFavorites;
@@ -37,6 +55,18 @@ public class FilesModulePage extends BasePage {
 
     @FindBy(xpath = "//input[@class='icon-confirm']")
     public WebElement submit;
+
+    @FindBy(xpath = "(//p[text()])[1]")
+    public WebElement numberOfUsage;
+
+    @FindBy(xpath = "//span[@class='svg icon icon-upload']")
+    public WebElement uploadFileBtn;
+
+    @FindBy(xpath = "(//a[@data-action='menu']/span)[7]")
+    public WebElement FileOption3Dots;
+
+    @FindBy(xpath = "//span[.='Delete file']")
+    public WebElement deleteFileOption;
 
 
 }
