@@ -1,5 +1,7 @@
 package com.trycloud.pages;
 
+import com.trycloud.utilities.Driver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -35,6 +37,7 @@ public class DashboardPage extends BasePage {
                 each.click();
             }
         }
+
 
     }
 }
