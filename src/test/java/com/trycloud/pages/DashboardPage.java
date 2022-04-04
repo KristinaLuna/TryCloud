@@ -37,4 +37,16 @@ public class DashboardPage extends BasePage {
         }
 
     }
+    @FindBy(xpath ="//a[@class='header-menu__trigger']")
+    public WebElement searchIcon1;
+
+    @FindBy(xpath = "//input[@type='search']")
+    public WebElement searchIconWindow;
+
+    @FindBy(xpath = "//h3[@class='unified-search__result-line-one']")
+    public WebElement searchFiles;
+
+    @FindBy(xpath = "//*[@type='reset']")
+    public WebElement resetSearch;
+
 }
