@@ -1,13 +1,10 @@
-@us_03 @smoke @regression
-Feature: As a user, I should be access all the main modules of the app.
+@regression
+Feature: As a user, I should be accessing all the main modules of the app.
 
-  Background:
-    Given user on the login page
-
-  @enes
-  Scenario: As a user, I should be access all the main modules of the app US3.
-    When user  log in with valid credentials USenes.
-    Then Verify the user see the following modules USenes.
+  Scenario Outline: Verify users accessing all the main modules of the app.
+    Given user is on the login page
+    When the user log in with valid "<username>" and "<password>"
+    Then verify the user see the following modules:
       | Dashboard |
       | Files     |
       | Photos    |
@@ -18,3 +15,10 @@ Feature: As a user, I should be access all the main modules of the app.
       | Circles   |
       | Calendar  |
       | Deck      |
+
+    Examples:
+      | username | password    |
+      | user22   | Userpass123 |
+      | user52   | Userpass123 |
+      | user82   | Userpass123 |
+      | user112  | Userpass123 |

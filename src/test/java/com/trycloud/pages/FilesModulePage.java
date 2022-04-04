@@ -58,5 +58,22 @@ public class FilesModulePage extends BasePage {
     @FindBy(xpath = "//ul[@id='appmenu']//li[@id='more-apps']//preceding-sibling::li")
     public List<WebElement> modules;
 
+    public List<String> getTextOfModules() {
+        List<String> moduleTexts = new ArrayList<>();
+
+        for (WebElement module : modules) {
+            BrowserUtils.hover(module);
+            BrowserUtils.sleep(2);
+            moduleTexts.add(module.getText());
+        }
+        return moduleTexts;
+    }
+    public void clickModule(String moduleName) {
+        String locator = "//span[.='" + moduleName + "']";
+
+        Driver.getDriver().findElement(By.xpath(locator)).click();
+
+
+    }
 
 }
