@@ -17,7 +17,25 @@ public class FilesModulePage extends BasePage {
 
 
     @FindBy(xpath = "//a[@class='action action-menu permanent']")
-    public List<WebElement> actionIcon;
+    public List<WebElement> actionIcons;
+
+    @FindBy(xpath = "(//a[@data-action='menu'])[1]")
+    public WebElement actionIcon;
+
+    @FindBy(xpath = "//span[@class='icon icon-starred']")
+    public WebElement favoriteIcon;
+
+    @FindBy(xpath = "(//span[@class='innernametext'])[1]")
+    public WebElement chosenToFavoriteFile;
+
+    @FindBy(xpath = "//span[@class='innernametext']")
+    public List<WebElement> filesInFavoritesModules;
+
+    @FindBy(xpath = "//span[.='Add to favorites']")
+    public WebElement addToFavorites;
+
+    @FindBy(xpath = "//a[@class='nav-icon-favorites svg']")
+    public WebElement favoritesModules;
 
     @FindBy(xpath = "//span[.='Remove from favorites']")
     public WebElement removeFromFavorites;
