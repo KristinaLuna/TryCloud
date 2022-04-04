@@ -14,7 +14,6 @@ public class FilesModulePage extends BasePage {
     @FindBy(xpath="//div[@id='app-settings-content']//label")
     public List<WebElement> checkBoxes;
 
-
     @FindBy(xpath = "//a[@class='action action-menu permanent']")
     public List<WebElement> actionIcons;
 
@@ -70,16 +69,16 @@ public class FilesModulePage extends BasePage {
     public WebElement deleteFileOption;
 
     //irena
-    @FindBy(xpath = "(//a[@class='action action-menu permanent'])[1]")
+    @FindBy(xpath = "//tr[@data-file='DO NOT DELETE.docx']//a/span[@class='icon icon-more']")
     public WebElement treeDotsIrena;
     //irena
-    @FindBy(xpath = "(//span[.='.docx'])[2]")
+    @FindBy(xpath = "//tr[@data-file='DO NOT DELETE.docx']") // (//span[.='.docx'])[2]
     public WebElement doNotDeleteFile;
     //irena
     @FindBy(xpath = "//input[@id='file_upload_start']")
-    public WebElement uploadFileButtonNew;
+    public WebElement uploadFileButtonIrena;
     //irena
-    @FindBy(xpath = "/tr[@data-id='23272']//span[.='Upload File!']") //span[.='Upload File!'])[2]
+    @FindBy(xpath = "//tr[@data-file='Upload File!.docx']")
     public WebElement uploadedFile;
     //irena
     @FindBy(xpath = "//tr[@data-file='Upload File!.docx']//span[@class='fileactions']//a[@data-action='menu']")

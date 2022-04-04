@@ -40,17 +40,16 @@ public class DashboardPage extends BasePage{
 
         for (WebElement module : modules) {
             BrowserUtils.hover(module);
-            BrowserUtils.sleep(2);
+            // BrowserUtils.highlight(module); try and see the results this is good for us
+            BrowserUtils.sleep(1);
             moduleTexts.add(module.getText());
         }
         return moduleTexts;
     }
 
     public void clickModule(String moduleName) {
-        String locator = "//span[.='" + moduleName + "']";
-
+        String locator = "//ul[@id='appmenu']//span[normalize-space(.)='"+moduleName+"']/..";
         Driver.getDriver().findElement(By.xpath(locator)).click();
-
 
     }
 }
