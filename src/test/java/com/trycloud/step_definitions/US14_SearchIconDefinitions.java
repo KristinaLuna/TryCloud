@@ -13,13 +13,9 @@ import org.openqa.selenium.Keys;
 import java.util.Map;
 
 public class US14_SearchIconDefinitions {
-    LoginPage loginPage=new LoginPage();
+
     DashboardPage dashboardPage=new DashboardPage();
-    @Given("user on the dashboard page")
-    public void user_on_the_dashboard_page() {
-        Driver.getDriver().get(ConfigurationReader.getProperty("trycloud.net.url"));
-        loginPage.Login();
-    }
+
     @When("the user clicks the magnifier icon on the right top US14")
     public void the_user_clicks_the_magnifier_icon_on_the_right_top_us14() {
         BrowserUtils.sleep(2);
