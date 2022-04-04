@@ -1,6 +1,6 @@
 package com.trycloud.step_definitions;
 
-import com.trycloud.pages.DashboardPage;
+import com.trycloud.pages.US3_DashboardPage;
 import com.trycloud.pages.FilesModulePage;
 import com.trycloud.pages.LoginPage;
 import com.trycloud.utilities.BrowserUtils;
@@ -19,7 +19,7 @@ import java.awt.event.KeyEvent;
 public class US10_UpdateSettingsDefs {
 
     LoginPage loginPage = new LoginPage();
-    DashboardPage dashboard = new DashboardPage();
+    US3_DashboardPage dashboard = new US3_DashboardPage();
     FilesModulePage files = new FilesModulePage();
     String storageBeforeUpload;
 

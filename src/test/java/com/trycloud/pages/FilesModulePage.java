@@ -1,8 +1,12 @@
 package com.trycloud.pages;
 
+import com.trycloud.utilities.BrowserUtils;
+import com.trycloud.utilities.Driver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class FilesModulePage extends BasePage {
@@ -10,7 +14,7 @@ public class FilesModulePage extends BasePage {
     @FindBy(css = "button[class='settings-button']")
     public WebElement settingsBtn;
 
-    @FindBy(xpath="//div[@id='app-settings-content']//label")
+    @FindBy(xpath = "//div[@id='app-settings-content']//label")
     public List<WebElement> checkBoxes;
 
 
@@ -49,6 +53,10 @@ public class FilesModulePage extends BasePage {
 
     @FindBy(xpath = "//span[.='Delete file']")
     public WebElement deleteFileOption;
+
+
+    @FindBy(xpath = "//ul[@id='appmenu']//li[@id='more-apps']//preceding-sibling::li")
+    public List<WebElement> modules;
 
 
 }

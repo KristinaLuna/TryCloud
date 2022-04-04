@@ -1,6 +1,6 @@
 package com.trycloud.step_definitions;
 
-import com.trycloud.pages.DashboardPage;
+import com.trycloud.pages.US3_DashboardPage;
 import com.trycloud.pages.FilesModulePage;
 import com.trycloud.pages.LoginPage;
 import io.cucumber.java.en.Then;
@@ -10,13 +10,13 @@ import org.openqa.selenium.StaleElementReferenceException;
 public class US6_RemoveFilesAndUploadFile_StepDefinition {
 
     LoginPage loginPage = new LoginPage();
-    DashboardPage dashboardPage = new DashboardPage();
+    US3_DashboardPage dashboardPage = new US3_DashboardPage();
     FilesModulePage filesModulePage = new FilesModulePage();
 
     @When("the user clicks the {string} module")
     public void the_user_clicks_the_module(String filesModule) {
         try {
-            DashboardPage.selectModule(dashboardPage.fileActionMenu, filesModule);
+            US3_DashboardPage.selectModule(dashboardPage.fileActionMenu, filesModule);
         }catch (StaleElementReferenceException st){
             System.out.println("StaleElementReferenceException is catch");
         }
