@@ -3,6 +3,7 @@ package com.trycloud.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.awt.geom.QuadCurve2D;
 import java.util.List;
 
 public class FilesModulePage extends BasePage {
@@ -67,6 +68,24 @@ public class FilesModulePage extends BasePage {
 
     @FindBy(xpath = "//span[.='Delete file']")
     public WebElement deleteFileOption;
+
+    //irena
+    @FindBy(xpath = "(//a[@class='action action-menu permanent'])[1]")
+    public WebElement treeDotsIrena;
+    //irena
+    @FindBy(xpath = "(//span[.='.docx'])[2]")
+    public WebElement doNotDeleteFile;
+    //irena
+    @FindBy(xpath = "//input[@id='file_upload_start']")
+    public WebElement uploadFileButtonNew;
+    //irena
+    @FindBy(xpath = "/tr[@data-id='23272']//span[.='Upload File!']") //span[.='Upload File!'])[2]
+    public WebElement uploadedFile;
+    //irena
+    @FindBy(xpath = "//tr[@data-file='Upload File!.docx']//span[@class='fileactions']//a[@data-action='menu']")
+    public WebElement uploadedFileThreeDots;
+
+
 
 
 }

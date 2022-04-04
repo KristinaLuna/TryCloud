@@ -5,12 +5,31 @@ import com.trycloud.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class DashboardPage extends BasePage{
+
+    @FindBy(xpath = "//span[.='Dashboard']")
+    public WebElement dashboardModule;
+
+    @FindBy(css="li[data-id='files']")
+    public WebElement filesModule ;
+
+    @FindBy(css ="li[data-id='spreed']")
+    public WebElement talkModule;
+
+    @FindBy(css="li[data-id='contacts']")
+    public WebElement contactsModule ;
+
+    @FindBy(xpath ="//div[@class='header-menu unified-search header-menu--opened']")
+    public WebElement searchIcon;
+
+    @FindBy(xpath = "//ul[@id='appmenu']/li/a")
+    public List<WebElement> fileActionMenu;
+
 
 
     @FindBy(xpath = "//ul[@id='appmenu']//li[@id='more-apps']//preceding-sibling::li")
