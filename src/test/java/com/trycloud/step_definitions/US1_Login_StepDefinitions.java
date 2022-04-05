@@ -12,12 +12,12 @@ public class US1_Login_StepDefinitions {
 
     LoginPage login = new LoginPage();
 
-    @Given("user on the login page")
-    public void user_on_the_login_page() {
-       String url = ConfigurationReader.getProperty("trycloud.net.url");
-       Driver.getDriver().get(url);
+    //@Given("user on the login page")
+    //public void user_on_the_login_page() {
+      // String url = ConfigurationReader.getProperty("trycloud.net.url");
+       //Driver.getDriver().get(url);
         //Driver.getDriver().get(ConfigurationReader.getProperty("trycloud.net.url"));
-    }
+    //}
 
 
     @When("user use username {string} and passcode {string}")
@@ -27,10 +27,10 @@ public class US1_Login_StepDefinitions {
 
     }
 
-    @When("user click the login button")
-    public void user_click_the_login_button() {
-        login.submitButton.click();
-    }
+   // @When("user click the login button")
+    //public void user_click_the_login_button() {
+       // login.submitButton.click();
+    //}
 
     @Then("verify the user should be at the dashboard page")
     public void verify_the_user_should_be_at_the_dashboard_page() {
