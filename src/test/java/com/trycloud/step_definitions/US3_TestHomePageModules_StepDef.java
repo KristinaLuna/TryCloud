@@ -32,5 +32,6 @@ public class US3_TestHomePageModules_StepDef {
             actualModuleNames.add(eachModule.getAttribute("aria-label"));
         }
         assertEquals(expectedModuleNames, actualModuleNames);
+
     }
 }
