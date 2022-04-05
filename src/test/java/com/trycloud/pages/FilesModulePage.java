@@ -3,6 +3,7 @@ package com.trycloud.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.awt.geom.QuadCurve2D;
 import java.util.List;
 
 public class FilesModulePage extends BasePage {
@@ -13,9 +14,26 @@ public class FilesModulePage extends BasePage {
     @FindBy(xpath="//div[@id='app-settings-content']//label")
     public List<WebElement> checkBoxes;
 
-
     @FindBy(xpath = "//a[@class='action action-menu permanent']")
-    public List<WebElement> actionIcon;
+    public List<WebElement> actionIcons;
+
+    @FindBy(xpath = "(//a[@data-action='menu'])[1]")
+    public WebElement actionIcon;
+
+    @FindBy(xpath = "//span[@class='icon icon-starred']")
+    public WebElement favoriteIcon;
+
+    @FindBy(xpath = "(//span[@class='innernametext'])[1]")
+    public WebElement chosenToFavoriteFile;
+
+    @FindBy(xpath = "//span[@class='innernametext']")
+    public List<WebElement> filesInFavoritesModules;
+
+    @FindBy(xpath = "//span[.='Add to favorites']")
+    public WebElement addToFavorites;
+
+    @FindBy(xpath = "//a[@class='nav-icon-favorites svg']")
+    public WebElement favoritesModules;
 
     @FindBy(xpath = "//span[.='Remove from favorites']")
     public WebElement removeFromFavorites;
@@ -50,6 +68,7 @@ public class FilesModulePage extends BasePage {
     @FindBy(xpath = "//span[.='Delete file']")
     public WebElement deleteFileOption;
 
+
     @FindBy(xpath = "//a[@id='commentsTabView']")
     public WebElement comments;
 
@@ -64,5 +83,21 @@ public class FilesModulePage extends BasePage {
     public WebElement seePost;
     @FindBy(xpath = "//*[@id=\"fileList\"]/tr[1]/td[2]/a/span[2]/a[2]/span[1]")
     public WebElement actionIcons;
+
+    //irena
+    @FindBy(xpath = "//tr[@data-file='DO NOT DELETE.docx']//a/span[@class='icon icon-more']")
+    public WebElement treeDotsIrena;
+    //irena
+    @FindBy(xpath = "//tr[@data-file='DO NOT DELETE.docx']") // (//span[.='.docx'])[2]
+    public WebElement doNotDeleteFile;
+    //irena
+    @FindBy(xpath = "//input[@id='file_upload_start']")
+    public WebElement uploadFileButtonIrena;
+    //irena
+    @FindBy(xpath = "//tr[@data-file='Upload File!.docx']")
+    public WebElement uploadedFile;
+    //irena
+    @FindBy(xpath = "//tr[@data-file='Upload File!.docx']//span[@class='fileactions']//a[@data-action='menu']")
+    public WebElement uploadedFileThreeDots;
 
 }
