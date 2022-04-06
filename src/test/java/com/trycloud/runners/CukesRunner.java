@@ -16,11 +16,10 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/trycloud/step_definitions",
         dryRun = false,
- US8_DeleteFile
+
         tags = "",
 
-        tags = "@enes",
- master
+
         publish = false
 
 )
