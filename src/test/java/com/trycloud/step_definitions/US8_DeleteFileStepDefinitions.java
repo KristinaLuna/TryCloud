@@ -4,20 +4,13 @@ import com.trycloud.pages.DashboardPage;
 import com.trycloud.pages.FilesModulePage;
 import com.trycloud.pages.LoginPage;
 import com.trycloud.utilities.BrowserUtils;
-import com.trycloud.utilities.ConfigurationReader;
-import com.trycloud.utilities.Driver;
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 
-import java.awt.*;
-
-public class DeleteFileStepDefinitions {
+public class US8_DeleteFileStepDefinitions {
 
     LoginPage loginPage = new LoginPage();
     DashboardPage dashboardPage = new DashboardPage();
@@ -55,6 +48,7 @@ public class DeleteFileStepDefinitions {
                 Assert.assertTrue(fileName.equals(each.getText()));
             } else {
                 System.out.println("There is no chosen file added to module");
+
             }
         }
     }
