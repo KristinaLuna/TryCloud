@@ -53,11 +53,7 @@ public class DashboardPage extends BasePage{
         String locator = "//ul[@id='appmenu']//span[normalize-space(.)='"+moduleName+"']/..";
         Driver.getDriver().findElement(By.xpath(locator)).click();
 
- US8_DeleteFile
 
-
-
- master
     }
     @FindBy(xpath ="//a[@class='header-menu__trigger']")
     public WebElement searchIcon1;
