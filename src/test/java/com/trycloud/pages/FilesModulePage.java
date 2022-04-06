@@ -11,7 +11,7 @@ public class FilesModulePage extends BasePage {
     @FindBy(css = "button[class='settings-button']")
     public WebElement settingsBtn;
 
-    @FindBy(xpath="//div[@id='app-settings-content']//label")
+    @FindBy(xpath="//td[@class='selection']//input[@type='checkbox']")
     public List<WebElement> checkBoxes;
 
     @FindBy(xpath = "//a[@class='action action-menu permanent']")
@@ -68,6 +68,10 @@ public class FilesModulePage extends BasePage {
     @FindBy(xpath = "//span[.='Delete file']")
     public WebElement deleteFileOption;
 
+
+    @FindBy(xpath = "//label[@for='select_all_files']")
+    public WebElement selectAllFiles;
+
     //irena
     @FindBy(xpath = "//tr[@data-file='DO NOT DELETE.docx']//a/span[@class='icon icon-more']")
     public WebElement treeDotsIrena;
@@ -86,5 +90,5 @@ public class FilesModulePage extends BasePage {
 
 
 
-
+    
 }
