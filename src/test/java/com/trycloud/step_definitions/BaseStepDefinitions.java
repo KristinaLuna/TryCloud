@@ -15,5 +15,4 @@ public class BaseStepDefinitions  {
         loginPage.Login();
     }
 
-
 }

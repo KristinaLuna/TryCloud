@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.awt.geom.QuadCurve2D;
 import java.util.List;
 
 public class FilesModulePage extends BasePage {
@@ -12,9 +13,8 @@ public class FilesModulePage extends BasePage {
     @FindBy(css = "button[class='settings-button']")
     public WebElement settingsBtn;
 
-    @FindBy(xpath="//div[@id='app-settings-content']//label")
+    @FindBy(xpath="//td[@class='selection']//input[@type='checkbox']")
     public List<WebElement> checkBoxes;
-
 
     @FindBy(xpath = "//a[@class='action action-menu permanent']")
     public List<WebElement> actionIcons;
@@ -108,4 +108,26 @@ public class FilesModulePage extends BasePage {
         fileNameH = fileNameHolder;
     }
 
+    @FindBy(xpath = "//label[@for='select_all_files']")
+    public WebElement selectAllFiles;
+
+    //irena
+    @FindBy(xpath = "//tr[@data-file='DO NOT DELETE.docx']//a/span[@class='icon icon-more']")
+    public WebElement treeDotsIrena;
+    //irena
+    @FindBy(xpath = "//tr[@data-file='DO NOT DELETE.docx']") // (//span[.='.docx'])[2]
+    public WebElement doNotDeleteFile;
+    //irena
+    @FindBy(xpath = "//input[@id='file_upload_start']")
+    public WebElement uploadFileButtonIrena;
+    //irena
+    @FindBy(xpath = "//tr[@data-file='Upload File!.docx']")
+    public WebElement uploadedFile;
+    //irena
+    @FindBy(xpath = "//tr[@data-file='Upload File!.docx']//span[@class='fileactions']//a[@data-action='menu']")
+    public WebElement uploadedFileThreeDots;
+
+
+
+    
 }

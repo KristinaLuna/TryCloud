@@ -1,13 +1,12 @@
 package com.trycloud.step_definitions;
 
 import com.trycloud.pages.DashboardPage;
+
 import com.trycloud.pages.FilesModulePage;
 import com.trycloud.pages.LoginPage;
 import com.trycloud.utilities.BrowserUtils;
-import com.trycloud.utilities.ConfigurationReader;
 import com.trycloud.utilities.Driver;
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -28,8 +27,8 @@ public class US10_UpdateSettingsDefs {
 
     @When("user clicks the Files module")
     public void user_clicks_the_files_module() {
-        BrowserUtils.waitForVisibility(dashboard.filesModule, 5);
-        dashboard.filesModule.click();
+//        BrowserUtils.waitForVisibility(dashboard.filesModule, 5);
+//        dashboard.filesModule.click();
     }
 
     @When("user clicks Settings on the left bottom corner")
