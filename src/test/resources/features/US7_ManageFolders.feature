@@ -1,12 +1,12 @@
 
 
-
+@US7_Huma
 Feature: As a user, I should be able to remove files from the favorites and upload a file directly
 
   Story: As a user, I should be able to manage folders.
 
 
-  @US7_Huma
+
   Scenario: As a user, I should be able to add the folder
     Given user on the dashboard page
     When the user clicks the "Files" module
