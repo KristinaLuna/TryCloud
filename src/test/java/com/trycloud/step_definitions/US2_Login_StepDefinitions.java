@@ -8,7 +8,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-public class US1_US2_Login_StepDefinitions {
+public class US2_Login_StepDefinitions {
 
     LoginPage login = new LoginPage();
 
