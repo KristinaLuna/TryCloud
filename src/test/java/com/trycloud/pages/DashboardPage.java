@@ -41,7 +41,7 @@ public class DashboardPage extends BasePage{
         for (WebElement module : modules) {
             BrowserUtils.hover(module);
             // BrowserUtils.highlight(module); try and see the results this is good for us
-            BrowserUtils.sleep(1);
+            BrowserUtils.sleep(3);
             moduleTexts.add(module.getText());
         }
         return moduleTexts;
