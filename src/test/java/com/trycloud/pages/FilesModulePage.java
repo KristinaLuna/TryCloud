@@ -1,5 +1,7 @@
 package com.trycloud.pages;
 
+import com.trycloud.utilities.Driver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -68,6 +70,43 @@ public class FilesModulePage extends BasePage {
     @FindBy(xpath = "//span[.='Delete file']")
     public WebElement deleteFileOption;
 
+    //from Daniela
+    @FindBy(xpath = "(//span[@class='icon icon-more'])[3]")
+    public WebElement threeDots1;
+    //from Daniela
+    @FindBy(xpath = "//a[.='Deleted files']")
+    public WebElement deletedFilesLeft;
+    //from Daniela
+    @FindBy(xpath = "(//div[@class='thumbnail'])[3]")
+    public WebElement deletedModule;
+    //from Daniela
+    @FindBy(xpath = "//span[.='Delete folder']")
+    public WebElement deleteFolderDani;
+    //from Daniela
+    @FindBy(xpath = "//span[.='Delete file']")
+    public WebElement deleteFileDani;
+    //from Daniela
+    @FindBy(xpath = "//span[@class='innernametext']")
+    public List<WebElement>filesFromDeleteModule;
+   //from Daniela
+   @FindBy(xpath = "(//span[@class='innernametext'])[2]")
+   public WebElement choosenFile;
+   //from Daniela
+    @FindBy(xpath = "(//span[@class='innernametext'])[59]")
+    public WebElement deletedFileFinal;
+
+
+
+
+    //from Daniela
+    private static String fileNameH;
+    public static String getFileNameHolder() {
+        return fileNameH;
+    }
+    public static void setFileNameHolder(String fileNameHolder) {
+        fileNameHolder=Driver.getDriver().findElement(By.xpath("(//span[@class='innernametext'])[2]")).getText();
+        fileNameH = fileNameHolder;
+    }
 
     @FindBy(xpath = "//label[@for='select_all_files']")
     public WebElement selectAllFiles;
