@@ -19,14 +19,6 @@ public class US7_ManageFolders_StepDefinitions {
     FilesModulePage files = new FilesModulePage();
     DashboardPage dashboard = new DashboardPage();
 
-
-    @Given("user on the dashboard page")
-    public void user_on_the_dashboard_page() {
-        Driver.getDriver().get(ConfigurationReader.getProperty("trycloud.net.url"));
-        login.Login();
-
-    }
-
     @When("the user clicks the {string} module US7")
     public void the_user_clicks_the_module_us7(String string) {
         dashboard.filesModule.click();
