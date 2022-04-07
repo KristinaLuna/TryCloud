@@ -70,6 +70,21 @@ public class FilesModulePage extends BasePage {
     @FindBy(xpath = "//span[.='Delete file']")
     public WebElement deleteFileOption;
 
+    @FindBy(xpath = "//a[@id='commentsTabView']")
+    public WebElement comments;
+
+    @FindBy(xpath = "//input[@class='submit icon-confirm has-tooltip']")
+    public WebElement submitMessage;
+
+    @FindBy(xpath = "//*[.='Details']")
+    public  WebElement details;
+    @FindBy(xpath = "//div[@class='message']")
+    public WebElement message;
+    @FindBy(xpath = "(//div [.='good job'])[1]")
+    public WebElement seePost;
+    @FindBy(xpath = "//*[@id=\"fileList\"]/tr[1]/td[2]/a/span[2]/a[2]/span[1]")
+    public WebElement actionIcons;
+
     //from Daniela
     @FindBy(xpath = "(//span[@class='icon icon-more'])[3]")
     public WebElement threeDots1;
@@ -127,7 +142,4 @@ public class FilesModulePage extends BasePage {
     @FindBy(xpath = "//tr[@data-file='Upload File!.docx']//span[@class='fileactions']//a[@data-action='menu']")
     public WebElement uploadedFileThreeDots;
 
-
-
-    
 }
