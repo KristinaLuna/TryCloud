@@ -1,11 +1,8 @@
 package com.trycloud.pages;
 
-import com.trycloud.utilities.Driver;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import java.awt.geom.QuadCurve2D;
 import java.util.List;
 
 public class FilesModulePage extends BasePage {
@@ -13,38 +10,8 @@ public class FilesModulePage extends BasePage {
     @FindBy(css = "button[class='settings-button']")
     public WebElement settingsBtn;
 
-    @FindBy(xpath="//td[@class='selection']//input[@type='checkbox']")
+    @FindBy(xpath="//div[@id='app-settings-content']//label")
     public List<WebElement> checkBoxes;
-
-    @FindBy(xpath = "//a[@class='action action-menu permanent']")
-    public List<WebElement> actionIcons;
-
-    @FindBy(xpath = "(//a[@data-action='menu'])[1]")
-    public WebElement actionIcon;
-
-    @FindBy(xpath = "//span[@class='icon icon-starred']")
-    public WebElement favoriteIcon;
-
-    @FindBy(xpath = "(//span[@class='innernametext'])[1]")
-    public WebElement chosenToFavoriteFile;
-
-    @FindBy(xpath = "//span[@class='innernametext']")
-    public List<WebElement> filesInFavoritesModules;
-
-    @FindBy(xpath = "//span[.='Add to favorites']")
-    public WebElement addToFavorites;
-
-    @FindBy(xpath = "//a[@class='nav-icon-favorites svg']")
-    public WebElement favoritesModules;
-
-    @FindBy(xpath = "//span[.='Remove from favorites']")
-    public WebElement removeFromFavorites;
-
-    @FindBy(xpath = "//a[.='Favorites']")
-    public WebElement favoritesSubmodule;
-
-    @FindBy(xpath = "//span[.='Upload file']")
-    public WebElement uploadFileButton;
 
     @FindBy(xpath = "//a[@class='button new']")
     public WebElement addIcon;
@@ -58,6 +25,12 @@ public class FilesModulePage extends BasePage {
     @FindBy(xpath = "//input[@class='icon-confirm']")
     public WebElement submit;
 
+    @FindBy(xpath ="//span[text()='Upload file']")
+    public WebElement uploadFile;
+
+    @FindBy (xpath = "//input[@id='file_upload_start']")
+    public WebElement upload;
+
     @FindBy(xpath = "(//p[text()])[1]")
     public WebElement numberOfUsage;
 
@@ -69,6 +42,21 @@ public class FilesModulePage extends BasePage {
 
     @FindBy(xpath = "//span[.='Delete file']")
     public WebElement deleteFileOption;
+
+    @FindBy(xpath = "//a[@id='commentsTabView']")
+    public WebElement comments;
+
+    @FindBy(xpath = "//input[@class='submit icon-confirm has-tooltip']")
+    public WebElement submitMessage;
+
+    @FindBy(xpath = "//*[.='Details']")
+    public  WebElement details;
+    @FindBy(xpath = "//div[@class='message']")
+    public WebElement message;
+    @FindBy(xpath = "(//div [.='good job'])[1]")
+    public WebElement seePost;
+    @FindBy(xpath = "//*[@id=\"fileList\"]/tr[1]/td[2]/a/span[2]/a[2]/span[1]")
+    public WebElement actionIcons;
 
     //from Daniela
     @FindBy(xpath = "(//span[@class='icon icon-more'])[3]")
@@ -94,9 +82,6 @@ public class FilesModulePage extends BasePage {
    //from Daniela
     @FindBy(xpath = "(//span[@class='innernametext'])[59]")
     public WebElement deletedFileFinal;
-
-
-
 
     //from Daniela
     private static String fileNameH;
@@ -128,6 +113,4 @@ public class FilesModulePage extends BasePage {
     public WebElement uploadedFileThreeDots;
 
 
-
-    
 }
