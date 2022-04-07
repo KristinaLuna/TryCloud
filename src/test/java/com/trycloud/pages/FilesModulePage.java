@@ -1,5 +1,7 @@
 package com.trycloud.pages;
 
+import com.trycloud.utilities.Driver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -11,7 +13,7 @@ public class FilesModulePage extends BasePage {
     @FindBy(css = "button[class='settings-button']")
     public WebElement settingsBtn;
 
-    @FindBy(xpath="//div[@id='app-settings-content']//label")
+    @FindBy(xpath="//td[@class='selection']//input[@type='checkbox']")
     public List<WebElement> checkBoxes;
 
     @FindBy(xpath = "//a[@class='action action-menu permanent']")
@@ -68,7 +70,6 @@ public class FilesModulePage extends BasePage {
     @FindBy(xpath = "//span[.='Delete file']")
     public WebElement deleteFileOption;
 
-
     @FindBy(xpath = "//a[@id='commentsTabView']")
     public WebElement comments;
 
@@ -83,6 +84,47 @@ public class FilesModulePage extends BasePage {
     public WebElement seePost;
     @FindBy(xpath = "//*[@id=\"fileList\"]/tr[1]/td[2]/a/span[2]/a[2]/span[1]")
     public WebElement actionIcons;
+
+    //from Daniela
+    @FindBy(xpath = "(//span[@class='icon icon-more'])[3]")
+    public WebElement threeDots1;
+    //from Daniela
+    @FindBy(xpath = "//a[.='Deleted files']")
+    public WebElement deletedFilesLeft;
+    //from Daniela
+    @FindBy(xpath = "(//div[@class='thumbnail'])[3]")
+    public WebElement deletedModule;
+    //from Daniela
+    @FindBy(xpath = "//span[.='Delete folder']")
+    public WebElement deleteFolderDani;
+    //from Daniela
+    @FindBy(xpath = "//span[.='Delete file']")
+    public WebElement deleteFileDani;
+    //from Daniela
+    @FindBy(xpath = "//span[@class='innernametext']")
+    public List<WebElement>filesFromDeleteModule;
+   //from Daniela
+   @FindBy(xpath = "(//span[@class='innernametext'])[2]")
+   public WebElement choosenFile;
+   //from Daniela
+    @FindBy(xpath = "(//span[@class='innernametext'])[59]")
+    public WebElement deletedFileFinal;
+
+
+
+
+    //from Daniela
+    private static String fileNameH;
+    public static String getFileNameHolder() {
+        return fileNameH;
+    }
+    public static void setFileNameHolder(String fileNameHolder) {
+        fileNameHolder=Driver.getDriver().findElement(By.xpath("(//span[@class='innernametext'])[2]")).getText();
+        fileNameH = fileNameHolder;
+    }
+
+    @FindBy(xpath = "//label[@for='select_all_files']")
+    public WebElement selectAllFiles;
 
     //irena
     @FindBy(xpath = "//tr[@data-file='DO NOT DELETE.docx']//a/span[@class='icon icon-more']")

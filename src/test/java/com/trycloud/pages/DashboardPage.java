@@ -1,6 +1,8 @@
 package com.trycloud.pages;
 
+
 import com.trycloud.utilities.BrowserUtils;
+
 import com.trycloud.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -41,7 +43,7 @@ public class DashboardPage extends BasePage{
         for (WebElement module : modules) {
             BrowserUtils.hover(module);
             // BrowserUtils.highlight(module); try and see the results this is good for us
-            BrowserUtils.sleep(1);
+            BrowserUtils.sleep(3);
             moduleTexts.add(module.getText());
         }
         return moduleTexts;
@@ -50,6 +52,7 @@ public class DashboardPage extends BasePage{
     public void clickModule(String moduleName) {
         String locator = "//ul[@id='appmenu']//span[normalize-space(.)='"+moduleName+"']/..";
         Driver.getDriver().findElement(By.xpath(locator)).click();
+
 
     }
     @FindBy(xpath ="//a[@class='header-menu__trigger']")
