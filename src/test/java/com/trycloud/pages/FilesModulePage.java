@@ -25,4 +25,10 @@ public class FilesModulePage extends BasePage {
     @FindBy(xpath = "//input[@class='icon-confirm']")
     public WebElement submit;
 
+    @FindBy(xpath ="//span[text()='Upload file']")
+    public WebElement uploadFile;
+
+    @FindBy (xpath = "//input[@id='file_upload_start']")
+    public WebElement upload;
+
 }
