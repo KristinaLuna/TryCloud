@@ -81,6 +81,4 @@ public class US6_RemoveFilesAndUploadFile_StepDefinition {
         filesModulePage.deleteFileOption.click();
         BrowserUtils.waitFor(2);
     }
-
-
 }
