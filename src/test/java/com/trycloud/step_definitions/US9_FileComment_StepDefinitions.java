@@ -6,7 +6,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-public class US_09_FileComment_StepDefinitions {
+public class US9_FileComment_StepDefinitions {
     LoginPage loginPage = new LoginPage();
     FilesModulePage move = new FilesModulePage();
 
