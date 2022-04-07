@@ -1,6 +1,0 @@
-Feature: As a user, I should be able to access to Files module
-  @nawar
-  Scenario: Verify users can access to Files module
-    Given User on the Dashboard page
-    When User clicks the "Files" module
-    Then verify the page title is "Files - Trycloud QA.”
