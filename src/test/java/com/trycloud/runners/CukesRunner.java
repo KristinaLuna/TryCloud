@@ -17,7 +17,7 @@ import org.junit.runner.RunWith;
         glue = "com/trycloud/step_definitions",
         dryRun = false,
 
-        tags = "@US5",
+        tags = "",
 
         publish = false
 
