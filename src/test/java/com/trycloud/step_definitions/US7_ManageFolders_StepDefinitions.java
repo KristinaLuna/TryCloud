@@ -32,6 +32,7 @@ public class US7_ManageFolders_StepDefinitions {
         dashboard.filesModule.click();
     }
 
+
     @When("user clicks the add icon on the top module US7")
     public void user_clicks_the_add_icon_on_the_top_module_us7() {
         files.addIcon.click();
