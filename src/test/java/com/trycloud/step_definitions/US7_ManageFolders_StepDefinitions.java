@@ -53,6 +53,7 @@ public class US7_ManageFolders_StepDefinitions {
         files.submit.click();
     }
 
+
     @Then("Verify the folder is displayed on the page module US7")
     public void verify_the_folder_is_displayed_on_the_page_module_us7() {
         WebElement folder = Driver.getDriver().findElement(By.xpath("//span[text()=\"Testing1\"]"));

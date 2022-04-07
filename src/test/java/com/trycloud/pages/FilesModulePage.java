@@ -30,4 +30,5 @@ public class FilesModulePage extends BasePage {
 
     @FindBy (xpath = "//input[@id='file_upload_start']")
     public WebElement upload;
+
 }
